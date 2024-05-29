@@ -7,9 +7,11 @@ return {
         end,
 
         config = function()
-            require('nvim-treesitter.install').prefer_git = false
-            require('nvim-treesitter.install').compilers = { 'clang' }
-            require('nvim-treesitter.configs').setup { highlight = { enable = true } }
+            require("nvim-treesitter.install").prefer_git = false
+            require("nvim-treesitter.install").compilers = { "clang" }
+            require("nvim-treesitter.configs").setup {
+                highlight = { enable = true, additional_vim_regex_highlighting = false }
+            }
         end,
     },
 }

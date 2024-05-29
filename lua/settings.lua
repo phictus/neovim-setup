@@ -5,7 +5,7 @@ local o = vim.opt
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 
--- Doesn't show --INSERT-- and --VISUAL--
+-- Doesn"t show --INSERT-- and --VISUAL--
 o.showmode = false
 
 -- Theme
@@ -24,8 +24,8 @@ o.scrolloff = 8
 
 -- Better editor UI
 o.number = true
-o.numberwidth = 5
-o.signcolumn = 'yes:2'
+o.relativenumber = true
+o.signcolumn = "yes:1"
 o.cursorline = true
 
 -- Better editing experience
@@ -35,10 +35,10 @@ o.softtabstop = 4
 o.shiftwidth = 4
 o.expandtab = true
 o.list = true
-o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂'
+o.listchars = "trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
 
 -- Makes neovim and host OS clipboard play nicely with each other
-o.clipboard = 'unnamedplus'
+o.clipboard = "unnamedplus"
 
 -- Case insensitive searching UNLESS /C or capital in search
 o.ignorecase = true
@@ -49,9 +49,9 @@ o.backup = false
 o.writebackup = false
 o.undofile = true
 o.swapfile = false
--- o.backupdir = '/tmp/'
--- o.directory = '/tmp/'
--- o.undodir = '/tmp/'
+-- o.backupdir = "/tmp/"
+-- o.directory = "/tmp/"
+-- o.undodir = "/tmp/"
 
 -- Remember 50 items in commandline history
 o.history = 50
@@ -61,16 +61,19 @@ o.splitright = true
 o.splitbelow = true
 
 -- Preserve view while jumping
-o.jumpoptions = 'view'
+o.jumpoptions = "view"
 
 -- Stable buffer content on window open/close events.
-o.splitkeep = 'screen'
+o.splitkeep = "screen"
 
 -- LF instead of CRLF
-o.fileformats = 'unix,dos'
+o.fileformats = "unix,dos"
 
 -- C/C++
-o.cinoptions = { 'Ls', ':0', 'N-s', 'E-s' }
+o.cinoptions = { "Ls", "g0", ":0", "N-s", "E-s", "(s", "m1" }
+
+-- Remove bottom search result count
+o.shortmess:append("S")
 
 -- Spell Checker
 o.spell = true

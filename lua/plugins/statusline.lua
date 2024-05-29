@@ -1,14 +1,13 @@
 return {
     {
         "nvim-lualine/lualine.nvim",
-        lazy = false,
-        priority = 10,
+
         dependencies = {
-            "akinsho/bufferline.nvim",
+            "nvim-tree/nvim-web-devicons",
         },
 
         config = function()
             require("configs.statusline")
-        end
+        end,
     },
 }

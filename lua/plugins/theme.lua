@@ -1,6 +1,6 @@
 return {
     {
-        "AlexvZyl/nordic.nvim",
+        "sainnhe/gruvbox-material",
         lazy = false,
         priority = 1000,
 
