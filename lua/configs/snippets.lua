@@ -25,30 +25,3 @@ local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 local ms = ls.multi_snippet
 local k = require("luasnip.nodes.key_indexer").new_key
-
-ls.add_snippets("cpp", {
-    s("start_competitive_programming", {
-        t({
-            "#include <iostream>",
-            "#include <cstdint>",
-            "",
-            "using namespace std;",
-            "",
-            "void solve_test() {",
-            "",
-            "}",
-            "",
-            "int main() {",
-            "    ios_base::sync_with_stdio(false);",
-            "",
-            "    int64_t test_count;",
-            "    cin >> test_count;",
-            "    for (int64_t i = 0; i < test_count; i++) {",
-            "        solve_test();",
-            "    }",
-            "",
-            "    return 0;",
-            "}"
-        })
-    })
-});
